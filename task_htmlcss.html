@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>html/css 실습</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="./style/task_htmlcss.css"/>
+</head>
+<body>
+
+    <header>
+        <img src="./img/logo.svg" alt="샘표 로고" class="logo"/>
+        <a href="#" class="logout">로그아웃</a>
+    </header>
+    <hr/>
+    <main id="main-content" class="main-content">
+        <section class="recipe-grid">
+            <div class="recipe-card" style="background-image: url('./img/thum_img_1.jpg');">
+                <a class="type-recipe">토마토 레시피</a>
+                <a class="name-recipe">방울토마토해물탕</a>
+            </div>
+            <div class="recipe-card" style="background-image: url('./img/thum_img_2.jpg');">
+                <a class="type-recipe">토마토 레시피</a>
+                <a class="name-recipe">토마토된장찌개</a>
+            </div>
+            <div class="recipe-card" style="background-image: url('./img/thum_img_3.jpg');">
+                <a class="type-recipe">토마토 레시피</a>
+                <a class="name-recipe">토마토영양부추무침</a>
+            </div>
+            <div class="recipe-card" style="background-image: url('./img/thum_img_4.jpg');">
+                <a class="type-recipe">우엉 레시피</a>
+                <a class="name-recipe">우엉무침(말랭이)</a>
+            </div>
+            <div class="recipe-card" style="background-image: url('./img/thum_img_5.jpg');">
+                <a class="type-recipe">우엉 레시피</a>
+                <a class="name-recipe">우엉꿀조림</a>
+            </div>
+            <div class="recipe-card" style="background-image: url('./img/thum_img_6.jpg');">
+                <a class="type-recipe">우엉 레시피</a>
+                <a class="name-recipe">우엉국</a>
+            </div>
+        </section>
+        
+        <nav class="pagination">
+            <a href="#"><<</a>
+            <a href="#"><</a>
+            <a>|</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a>|</a>
+            <a href="#">></a>
+            <a href="#">>></a>
+        </nav>
+
+        <!-- js과제 2번 팝업으로 상세 내용 표시-->
+        <!-- 팝업과 히든 클래스 동시에 정의 -->
+        <div id="recipe-popup" class="popup hidden">  
+            <div class="popup-content">
+                <span id="close-popup" class="close">&times;</span>
+                <h2>상세 레시피</h2>
+                <p>상세 레시피 내용</p>
+            </div>
+        </div>
+    
+    </main>
+    <footer class="footer">
+      <p>ⓒ 1946-2022 Sempio</p>
+    </footer>
+<script type="text/javascript" src="./scripts/task_htmlcss.js" defer></script>
+
+</body>
+</html>
+

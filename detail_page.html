@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>상세 레시피</title>
+    </head>
+    <body>
+        <div class = "recipe-detail">
+            <h2 id="recipe-name"></h2>
+            <img id="recipe-img" src="" alt="Recipe Image">
+            <p id="recipe-detail"></p>
+        </div>
+
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            const img = urlParams.get('img');
+            const detail = urlParams.get('detail');
+
+            document.getElementById('recipe-name').textContent = name;
+            document.getElementById('recipe-img').src = img;
+            document.getElementById('recipe-detail').textContent = detail;
+        </script>
+    </body>
+</html>
