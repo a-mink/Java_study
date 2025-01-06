@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" th:href="@{/css/detail_page.css}"/>
+        <title>상세 레시피</title>
+    </head>
+    <body>
+
+        <div class = "recipe-detail">
+            <div class = "left-content">
+                <h2 id="recipe-name"></h2>
+                <p id="recipe-detail"></p>
+            </div>
+            <div class = "right-content">
+                <img id="recipe-img" src="" alt="Recipe Image">
+            </div>
+        </div>
+        <div class = "delete-section">
+            <button id="delete-button" class="delete-btn">레시피 삭제</button>
+        </div>
+
+        <script th:src="@{/js/detail_page.js}"></script>
+    </body>
+</html>

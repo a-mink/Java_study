@@ -1,0 +1,108 @@
+/* 전체 레이아웃 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    border-top: 2mm solid #c10100; /* 상단 빨간 선 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* 상세 페이지 컨테이너 */
+  .recipe-detail {
+    width: 90%;
+    max-width: 1000px;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 1fr auto; /* 좌측: 텍스트, 우측: 이미지 */
+    column-gap: 20px;
+    align-items: start; /* 상단 정렬 */
+    min-height: calc(100vh - 140px); /* 하단 버튼과 겹치지 않도록 공간 확보 */
+    box-sizing: border-box;
+  }
+  
+  /* 왼쪽 콘텐츠 스타일 */
+  .recipe-detail .left-content {
+    text-align: left;
+  }
+  
+  .recipe-detail .left-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-detail .left-content p {
+    font-size: 1.2rem;
+    color: #555555;
+    line-height: 1.8;
+    margin-top: 10px;
+  }
+  
+  /* 오른쪽 이미지 스타일 */
+  .recipe-detail .right-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  
+  .recipe-detail .right-content img {
+    width: 350px; /* 사진 크기 줄임 */
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* 반응형 디자인 */
+  @media screen and (max-width: 768px) {
+    .recipe-detail {
+      grid-template-columns: 1fr; /* 좁은 화면에서는 상하 배치 */
+      row-gap: 20px;
+    }
+  
+    .recipe-detail .right-content {
+      justify-content: center;
+    }
+  
+    .recipe-detail .right-content img {
+      width: 40%; /* 이미지가 화면에 맞게 확장 */
+    } 
+   
+  }
+
+  /* 삭제 버튼 섹션 */
+.delete-section {
+  position: fixed; /* 버튼을 항상 하단에 고정 */
+  bottom: 10px; /* 페이지 하단에서 20px 간격 */
+  left: 50%; /* 가로 중앙 정렬 */
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 30px;
+}
+
+#delete-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #d92222da;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#delete-button:hover {
+  background-color: #6d0202da;
+}

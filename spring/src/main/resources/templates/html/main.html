@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>html/css 실습</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<header>
+    <img src="@{/img/logo.svg}" alt="샘표 로고" class="logo"/>
+    <a href="#" class="logout">로그아웃</a>
+</header>
+<hr/>
+<main id="main-content" class="main-content">
+
+    <section class="recipe-header">
+        <div class="recipe-find">
+            <input type="number" id="recipe-number" placeholder="레시피 번호 입력" min="1" th:value="${recipeNumber}" />
+            <button id="recipe-search">레시피 조회</button>
+        </div>
+        <div class="recipe-add">
+            <button id="add-recipe">레시피 등록</button>
+        </div>
+    </section>
+
+    <section class="recipe-grid">
+        <div th:each="recipe : ${main}" class="recipe-card" th:style="'background-image: url(' + @{/img/} + ${recipe.thumbnail} + ')'">
+            <a th:text="${recipe.type}" class="type-recipe"></a>
+            <a th:text="${recipe.name}" class="name-recipe"></a>
+        </div>
+    </section>
+
+    <nav class="pagination">
+        <a href="#"><<</a>
+        <a href="#"> < </a>
+        <a>|</a>
+        <a href="#" th:text="${pageNumber}" th:href="@{/main(page=${pageNumber})}">1</a>
+        <a href="#" th:text="${pageNumber + 1}" th:href="@{/main(page=${pageNumber + 1})}">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        <a>|</a>
+        <a href="#">></a>
+        <a href="#">>></a>
+    </nav>
+
+</main>
+<footer class="footer">
+    <p>ⓒ 1946-2025 Sempio</p>
+</footer>
+<script type="text/javascript" th:src="@{/templates/js/main.js}" defer></script>
+
+</body>
+</html>
+
